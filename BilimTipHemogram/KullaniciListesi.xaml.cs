@@ -27,6 +27,8 @@ namespace BilimTipHemogram
         private void btnGeri_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.fr.GoBack();
+
+
         }
     }
 }

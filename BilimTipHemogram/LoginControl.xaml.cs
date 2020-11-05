@@ -27,6 +27,7 @@ namespace BilimTipHemogram
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.kullaniciAdi = txtKullaniciAdi.Text;
+            // Could you remove this line please
             //this.Visibility = Visibility.Hidden;
             MainWindow.kl.lblDeneme.Content = txtKullaniciAdi.Text;
             MainWindow.fr.Navigate(MainWindow.kl);

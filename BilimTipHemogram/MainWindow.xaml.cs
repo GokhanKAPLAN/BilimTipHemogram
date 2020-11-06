@@ -11,6 +11,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO.Ports;
+using System.Threading;
+using System.ComponentModel;
+using System.Threading.Tasks;
+using System.Data.Entity.Core.Metadata.Edm;
+using System.Data.Entity.Migrations;
 
 namespace BilimTipHemogram
 {
@@ -30,16 +36,15 @@ namespace BilimTipHemogram
         public static OlcumSonuc olcumSonuc = new OlcumSonuc();
        // public static 
 
+        public SerialPort mySerialPort;        
+
+
+
         public MainWindow()
         {
             InitializeComponent();
-
-            //clsOlcumSonucDbContext Veri = new clsOlcumSonucDbContext();
-            //Veri.Database.Create();
-
-            fr = mainFrame;
-            mainFrame.Navigate(lc);
-
+            mySerialPort = new SerialPort(SerialPort.GetPortNames()[0]);
+            CihazYoneticisi yonetici = new CihazYoneticisi(mySerialPort);
         }
-    }
+    }     
 }

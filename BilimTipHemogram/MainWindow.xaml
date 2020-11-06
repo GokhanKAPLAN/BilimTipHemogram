@@ -5,8 +5,4 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BilimTipHemogram"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Frame x:Name="mainFrame" Content="Frame" HorizontalAlignment="Left" Height="390" VerticalAlignment="Top" Width="771" NavigationUIVisibility="Hidden">
-        
-    </Frame>
-</Window>
+        Title="MainWindow" Height="450" Width="800"/>

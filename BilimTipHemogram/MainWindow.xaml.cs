@@ -24,12 +24,22 @@ namespace BilimTipHemogram
         public static LoginControl lc = new LoginControl();
         public static string kullaniciAdi;
         public static Frame fr;
+
+        //Sonuc Listesi sayfalari
+        public static SonucListesi sonucList = new SonucListesi();
+        public static OlcumSonuc olcumSonuc = new OlcumSonuc();
+       // public static 
+
         public MainWindow()
         {
             InitializeComponent();
+
+            //clsOlcumSonucDbContext Veri = new clsOlcumSonucDbContext();
+            //Veri.Database.Create();
+
             fr = mainFrame;
             mainFrame.Navigate(lc);
-            
+
         }
     }
 }

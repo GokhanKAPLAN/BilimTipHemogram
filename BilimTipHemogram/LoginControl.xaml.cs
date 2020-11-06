@@ -30,9 +30,10 @@ namespace BilimTipHemogram
             // Could you remove this line please
             //this.Visibility = Visibility.Hidden;
             MainWindow.kl.lblDeneme.Content = txtKullaniciAdi.Text;
-            MainWindow.fr.Navigate(MainWindow.kl);
+            //MainWindow.fr.Navigate(MainWindow.kl);
 
-            
+            //Sonuc Listesi icin
+            MainWindow.fr.Navigate(MainWindow.sonucList);
         }
     }
 }

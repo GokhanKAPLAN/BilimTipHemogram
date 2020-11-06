@@ -53,6 +53,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="OlcumSonuc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SonucListesi.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="KullaniciListesi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -68,6 +76,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OlcumSonuc.xaml.cs">
+      <DependentUpon>OlcumSonuc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SonucListesi.xaml.cs">
+      <DependentUpon>SonucListesi.xaml</DependentUpon>
     </Compile>
     <Compile Include="KullaniciListesi.xaml.cs">
       <DependentUpon>KullaniciListesi.xaml</DependentUpon>
@@ -104,4 +118,4 @@
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-</Project>
+  </Project>

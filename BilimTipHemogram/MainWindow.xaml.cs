@@ -11,6 +11,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO.Ports;
+using System.Threading;
+using System.ComponentModel;
+using System.Threading.Tasks;
+using System.Data.Entity.Core.Metadata.Edm;
+using System.Data.Entity.Migrations;
 
 namespace BilimTipHemogram
 {
@@ -24,12 +30,15 @@ namespace BilimTipHemogram
         public static LoginControl lc = new LoginControl();
         public static string kullaniciAdi;
         public static Frame fr;
+        public SerialPort mySerialPort;        
+
+
+
         public MainWindow()
         {
             InitializeComponent();
-            fr = mainFrame;
-            mainFrame.Navigate(lc);
-            
+            mySerialPort = new SerialPort(SerialPort.GetPortNames()[0]);
+            CihazYoneticisi yonetici = new CihazYoneticisi(mySerialPort);
         }
-    }
+    }     
 }
